@@ -1,0 +1,11 @@
+
+.IconContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.Icon {
+    :hover {
+        cursor: pointer;
+    }
+}

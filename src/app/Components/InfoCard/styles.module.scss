@@ -1,0 +1,54 @@
+
+
+
+.InfoCardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.ImageContainer {
+    width: 150px;
+    height: 150px;
+    position: relative;
+
+    & > img {
+        border-radius: 5%;
+    }
+
+}
+
+.DescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 0.5em;
+
+    & > :nth-child(2) {
+        font-style: italic;
+        color: rgb(94, 149, 22);
+        
+    }
+
+    & > :nth-child(3) {
+        & > ul {
+            margin-left: 20px;
+        }
+        
+    }
+}
+
+.IconContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.Icon {
+    :hover {
+        cursor: pointer;
+    }
+}
+

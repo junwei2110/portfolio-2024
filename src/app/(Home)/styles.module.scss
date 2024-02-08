@@ -1,0 +1,103 @@
+@import "../Components/Navbar/navStyles.module.scss";
+
+.HomeLandingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+
+    & > h1 {
+        font-size: 3rem;
+        margin:  2rem 0 1rem 0;
+    }
+}
+
+.ProfilePic {
+    width: 150px;
+    height: 150px;
+    position: relative;
+
+    & > img {
+        border-radius: 50%;
+    }
+}
+
+.IntroSection {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
+.IntroInnerSection {
+    width: 90%;
+    max-width: 1350px;
+    padding: 3rem 1rem;
+
+    & > p:nth-child(1) {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    & > p:nth-child(2) {
+        font-size: 1.5rem;
+    }
+}
+
+.MyJourneyHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    padding: 5rem 0;
+
+    & > div {
+        position: relative;
+    }
+
+    & > div::before {
+        right: 110%;
+        background: white;
+        content: " ";
+        position: absolute;
+        line-height: 1.2;
+        top: 50%;
+        height: 5px;
+        width: 50%;
+    }
+
+    & > div::after {
+        left: 110%;
+        background: white;
+        content: " ";
+        position: absolute;
+        line-height: 1.2;
+        top: 50%;
+        height: 5px;
+        width: 50%;
+    }
+}
+
+.ProjectsContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    padding: 100px 3%;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+
