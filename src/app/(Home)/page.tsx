@@ -1,6 +1,8 @@
+import { ContactFooter } from "../Components/Footer/ContactFooter";
+import { Footer } from "../Components/Footer/Footer";
 import { IconContainer } from "../Components/IconContainer/IconContainer";
 import { ImageContainer } from "../Components/ImageContainer/ImageContainer";
-import { InfoCard } from "../Components/InfoCard/InfoCard";
+import { InfoCardContainer } from "../Components/InfoCard/InfoCardContainer";
 import { profilePic, personalInfo, projects } from "./constants";
 import styles from "./styles.module.scss";
 import parse from "html-react-parser";
@@ -17,7 +19,6 @@ export default function Home() {
                 <h1>{personalInfo.name}</h1>
                 <h3>{personalInfo.description}</h3>
                 <IconContainer gitLink={personalInfo.gitLink} linkedIn={personalInfo.linkedIn} reddit={personalInfo.reddit} email={personalInfo.email} />
-
             </div>
             <div className={styles.IntroSection}>
                 <div className={styles.IntroInnerSection}>
@@ -28,18 +29,10 @@ export default function Home() {
                 <div> My Journey </div>
             </div>
             <div className={styles.ProjectsContainer}>
-                {projects.map(project => (
-                    <InfoCard 
-                    title={project.title}
-                    timeline={project.timeline}
-                    description={project.description}
-                    picture={project.displayPic}
-                    picture_alt={project.displayAlt}
-                    gitLink={project.gitLink}
-                    website={project.website}
-                    />
-                ))}
+                <InfoCardContainer listObj={projects} />
             </div>
+            <ContactFooter />
+            <Footer />
       </>
     )
 }

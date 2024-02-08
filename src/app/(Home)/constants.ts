@@ -46,8 +46,8 @@ export const projects = [
         <li>Communicate and work together in large multifunctional teams using collaboration tools like
         git, jira and confluence with AGILE practices</li>
         </ul>`,
-        displayPic: "/DBS_Webview.png",
-        displayAlt: "Digibank App",
+        picture: "/DBS_Webview.png",
+        picture_alt: "Digibank App",
         website: "https://www.dbs.com.sg/personal/support/wealth-oet-search-for-stock.html"
     },
     {
@@ -61,8 +61,8 @@ export const projects = [
         as I wanted, but overall he was satisfied with the end result.
         </p> 
         `,
-        displayPic: "/MOS_Logo.png",
-        displayAlt: "MOS World Logo",
+        picture: "/MOS_Logo.png",
+        picture_alt: "MOS World Logo",
         gitLink: "https://github.com/junwei2110/MOS-SEA",
         website: "https://mos-sea.vercel.app/"
     },
@@ -76,8 +76,8 @@ export const projects = [
         the process, which allowed the client to use the same script for the future
         </p> 
         `,
-        displayPic: "/payroll_auto.png",
-        displayAlt: "payroll automation",
+        picture: "/payroll_auto.png",
+        picture_alt: "payroll automation",
         gitLink: "https://github.com/junwei2110/payroll-automation-mazars"
     },
     {
@@ -96,8 +96,8 @@ export const projects = [
         search bar optimization, push notifications using Google Firebase, deep-linking for user
         redirection, and chat application using Web Sockets.</li>
         </ul>`,
-        displayPic: "/LoveNest.png",
-        displayAlt: "LoveNest App",
+        picture: "/LoveNest.png",
+        picture_alt: "LoveNest App",
         gitLink: "https://github.com/junwei2110/LoveNest"
     }
 ]

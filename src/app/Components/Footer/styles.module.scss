@@ -1,0 +1,58 @@
+
+
+.Footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 0.5rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    & > div {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        & > p {
+            font-weight: 300;
+            font-size: 0.8rem;
+    
+            & > a {
+                color: #00acff;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+}
+
+.ContactFooter {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem 3rem;
+
+    & > div {
+        max-width: 1200px;
+        padding-right: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+.ContactFooterChild {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+
+.LinkFont {
+    color: #00acff;
+    font-weight: 400;
+}

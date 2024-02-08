@@ -13,6 +13,10 @@
         font-size: 3rem;
         margin:  2rem 0 1rem 0;
     }
+
+    & > h3 {
+        margin:  0 0 1rem 0;
+    }
 }
 
 .ProfilePic {
@@ -90,14 +94,12 @@
 }
 
 .ProjectsContainer {
-    display: flex;
-    flex-direction: column;
     background-color: white;
     position: relative;
     padding: 100px 3%;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
 }
 
+.FooterOverall {
+    width: 100%;
+}
 

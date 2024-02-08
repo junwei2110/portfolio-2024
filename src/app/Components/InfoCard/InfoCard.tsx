@@ -5,7 +5,7 @@ import { ImageContainer as Image } from "../ImageContainer/ImageContainer";
 import styles from "./styles.module.scss";
 import parse from 'html-react-parser';
 
-type InfoCardProps = {
+export type InfoCardProps = {
     title: string;
     timeline: string;
     description: string;

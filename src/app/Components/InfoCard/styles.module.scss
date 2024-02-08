@@ -52,3 +52,45 @@
     }
 }
 
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 20px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.InfoCardOverallContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    opacity: 0;
+}
