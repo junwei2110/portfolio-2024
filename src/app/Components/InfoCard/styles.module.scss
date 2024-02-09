@@ -4,6 +4,7 @@
 .InfoCardContainer {
     display: flex;
     flex-direction: row;
+    position: relative;
     width: 100%;
     max-width: 1200px;
     justify-content: center;
@@ -18,8 +19,26 @@
     & > img {
         border-radius: 5%;
     }
+    & > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(32, 33, 36);
+        opacity: 0;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        font-size: 2rem;
+    }
 
 }
+
+.AdditionalImage {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 
 .DescriptionContainer {
     display: flex;
@@ -76,10 +95,10 @@
     }
 }
 
-.animated {
-    animation-duration: 5s;
+.animatedInfoCardOverallContainer {
+    animation-duration: 2s;
     animation-fill-mode: forwards;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-fill-mode: forwards;
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
@@ -93,4 +112,106 @@
     justify-content: center;
     gap: 100px;
     opacity: 0;
+}
+
+
+@keyframes rotateYAxis {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+    
+}
+
+@-webkit-keyframes rotateYAxis {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes divColorChange {
+    from {
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    to {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+}
+
+@-webkit-keyframes divColorChange {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0.8
+    }
+}
+
+.animatedInfoCardPicture {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: rotateYAxis;
+    -webkit-animation-name: rotateYAxis;
+}
+
+.animatedInfoCardTextBox {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: divColorChange;
+    -webkit-animation-name: divColorChange;
+}
+
+.ImgGalleryDiv {
+    width: 75vw;
+    height: 75vh;
+    position: relative;
+    background: white;
+}
+
+.ImgGalleryDivContainer {
+    width: 90vw;
+    height: calc(95vh - 75px);
+    position: fixed;
+    top: 75px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > svg {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+        :hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.ImgGalleryOverlay {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
 }

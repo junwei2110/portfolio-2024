@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 3rem;
+    font-size: calc(1rem + 2vw);
     font-weight: 600;
     color: white;
     padding: 5rem 0;
@@ -96,7 +96,7 @@
 .ProjectsContainer {
     background-color: white;
     position: relative;
-    padding: 100px 3%;
+    padding: 50px 3%;
 }
 
 .FooterOverall {

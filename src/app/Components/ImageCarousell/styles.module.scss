@@ -1,0 +1,95 @@
+$animation-duration: 10;
+$text-fade-in-duration: $animation-duration * 15/100;
+$img-animation-fade-in-duration: $animation-duration * 5/100;
+
+$text-animation-duration: $text-fade-in-duration + 's';
+$img-animation-duration-s: $img-animation-fade-in-duration + 's';
+$img-animation-duration-ms: $img-animation-fade-in-duration * 1000 + 'ms';
+
+:export {
+    animationDuration: $animation-duration;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+     }
+    100% { 
+        opacity: 1;
+    }
+}
+
+.ImageContainer {
+    animation: fadeIn #{$img-animation-duration-s};
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    z-index: 2; 
+    background: white;
+}
+
+.ImageContainerEmpty {
+    opacity: 0;
+}
+
+
+.OverlayContainer {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.ButtonGroup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: calc(-10vh + 75px);
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    z-index: 4;
+}
+
+.RadioBtn {
+    accent-color: rgba(11, 192, 220, 0.9)
+}
+
+.TextContainer {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 10%;
+    bottom: 5%;
+    max-width: 570px;
+    opacity: 0;
+    animation: fadeIn #{$text-animation-duration};
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: #{$img-animation-duration-ms};
+    z-index: 4;
+}
+
+.MainText {
+    font-weight: 700;
+    font-size: 2.5em;
+    color: rgba(11, 192, 220, 0.9);
+    line-height: 1.8;
+}
+
+.SubText {
+    color: white;
+    line-height: 1.5;
+    font-size: 1.5em;
+}
+
+.Caption {
+    font-size: 0.875em;
+    font-style: italic;
+    position: relative;
+    bottom: -100%;
+    padding: 10px;
+}

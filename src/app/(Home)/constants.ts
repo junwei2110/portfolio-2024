@@ -46,9 +46,35 @@ export const projects = [
         <li>Communicate and work together in large multifunctional teams using collaboration tools like
         git, jira and confluence with AGILE practices</li>
         </ul>`,
-        picture: "/DBS_Webview.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/dbs_equityinfo.png",
         picture_alt: "Digibank App",
-        website: "https://www.dbs.com.sg/personal/support/wealth-oet-search-for-stock.html"
+        website: "https://www.dbs.com.sg/personal/support/wealth-oet-search-for-stock.html",
+        pictureLinks: [
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/dbs_equityinfo.png",
+                alt: "dbs_image1",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/dbs_stockholdings.png",
+                alt: "dbs_image2",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/dbs_stocksearch.png",
+                alt: "dbs_image3",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/DBS_Webview.png",
+                alt: "dbs_image3",
+                text: "",
+                subtext: "" 
+            }, 
+        ]
     },
     {
         title: "MOS World Company Website",
@@ -61,10 +87,30 @@ export const projects = [
         as I wanted, but overall he was satisfied with the end result.
         </p> 
         `,
-        picture: "/MOS_Logo.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/MOS_Logo.png",
         picture_alt: "MOS World Logo",
         gitLink: "https://github.com/junwei2110/MOS-SEA",
-        website: "https://mos-sea.vercel.app/"
+        website: "https://mos-sea.vercel.app/",
+        pictureLinks: [
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_intro.png",
+                alt: "mos_image1",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_ourwork.png", 
+                alt: "mos_image2",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_world.png",
+                alt: "mos_image3",
+                text: "",
+                subtext: "" 
+            }, 
+        ]
     },
     {
         title: "Payroll Calculation Automation",
@@ -76,7 +122,7 @@ export const projects = [
         the process, which allowed the client to use the same script for the future
         </p> 
         `,
-        picture: "/payroll_auto.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/payroll_auto.png",
         picture_alt: "payroll automation",
         gitLink: "https://github.com/junwei2110/payroll-automation-mazars"
     },
@@ -96,8 +142,41 @@ export const projects = [
         search bar optimization, push notifications using Google Firebase, deep-linking for user
         redirection, and chat application using Web Sockets.</li>
         </ul>`,
-        picture: "/LoveNest.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_Scheduler.png",
         picture_alt: "LoveNest App",
-        gitLink: "https://github.com/junwei2110/LoveNest"
+        gitLink: "https://github.com/junwei2110/LoveNest",
+        pictureLinks: [
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_Scheduler.png", 
+                alt: "lovenest_1",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_Gallery.png", 
+                alt: "lovenest_2",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_DatePlanner.png", 
+                alt: "lovenest_3",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_login.png", 
+                alt: "lovenest_4",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_SignUp.png",
+                alt: "lovenest_5",
+                text: "",
+                subtext: "" 
+            }, 
+            
+        ]
     }
 ]
