@@ -2,6 +2,14 @@
 .IconContainer {
     display: flex;
     gap: 10px;
+    :hover {
+        cursor: pointer;
+    }
+    & > span {
+        color: #1b1b1b;
+        font-weight: 600;
+        
+    }
 }
 
 .Icon {

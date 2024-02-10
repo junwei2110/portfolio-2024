@@ -1,11 +1,11 @@
 'use client';
 
 import { useRef } from "react";
-import { IconContainer } from "../IconContainer/IconContainer";
 import { ImageContainer as Image } from "../ImageContainer/ImageContainer";
 import styles from "./styles.module.scss";
 import parse from 'html-react-parser';
 import { Images } from "../ImageCarousell/ImageCarousellSmooth";
+import { IconWithDesc } from "../IconContainer/IconWithDesc";
 
 
 export type InfoCardProps = {
@@ -75,7 +75,8 @@ export const InfoCard = ({ title, timeline, description, picture, picture_alt, g
                 <h3><strong>{title}</strong></h3>
                 <div><strong>{timeline}</strong></div>
                 <div>{parse(description)}</div>
-                <IconContainer gitLink={gitLink} website={website} />
+                {gitLink ? <IconWithDesc iconName={"gitLink"} link={gitLink} text={`Github @ ${title}`} /> : null}
+                {website ? <IconWithDesc iconName={"website"} link={website} text={`Website @ ${title}`} /> : null}
             </div>
         </div>     
     )
