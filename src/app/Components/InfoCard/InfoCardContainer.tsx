@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { InfoCard, InfoCardProps } from "./InfoCard";
 import styles from "./styles.module.scss";
 import { ImageCarousell, Images } from "../ImageCarousell/ImageCarousellSmooth";
 import { IoCloseSharp } from "react-icons/io5";
+import { isMobile as checkMobile } from "@/app/utils";
 
 
 
@@ -13,7 +14,8 @@ export const InfoCardContainer = ({ listObj }: { listObj: InfoCardProps[]; }) =>
 
     const infoCardContainerRef = useRef<HTMLDivElement | null>(null);
     const [picLinks, setPicLinks] = useState<Images>([]);
-    // const [openImgGallery, setOpenImgGallery] = useState(false);
+    const [isMobile, setIsMobile] = useState(false)
+    const checkMobileStatus = useCallback(() => checkMobile, []);
 
     useEffect(() => {
         const callback = (entries: IntersectionObserverEntry[], _observer: IntersectionObserver) => {
@@ -28,9 +30,10 @@ export const InfoCardContainer = ({ listObj }: { listObj: InfoCardProps[]; }) =>
         if (infoCardContainerRef.current) {
             const observer = new IntersectionObserver(callback, { threshold: 0.1 });
             observer.observe(infoCardContainerRef.current);
+            setIsMobile(checkMobileStatus());
         }
 
-    }, [])
+    }, [checkMobileStatus])
 
 
     const handleCloseImgGallery = () => {
@@ -52,16 +55,18 @@ export const InfoCardContainer = ({ listObj }: { listObj: InfoCardProps[]; }) =>
                 website={project.website}
                 pictureLinks={project.pictureLinks}
                 setPicLinks={setPicLinks}
+                isMobile={isMobile}
                 />
             ))}
         </div>
-        {picLinks?.length ?
+        {!isMobile && picLinks?.length ?
         <>
             <div className={styles.ImgGalleryOverlay} />
             <div className={styles.ImgGalleryDivContainer}> 
                 <div className={styles.ImgGalleryDiv}>
                     <ImageCarousell
                     images={picLinks}
+                    useTimer={false}
                     />
                 </div>
                 <IoCloseSharp size={50} onClick={handleCloseImgGallery} />

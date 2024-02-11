@@ -46,7 +46,7 @@ export const projects = [
         <li>Communicate and work together in large multifunctional teams using collaboration tools like
         git, jira and confluence with AGILE practices</li>
         </ul>`,
-        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/dbs_equityinfo.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/dbs_stockholdings.png",
         picture_alt: "Digibank App",
         website: "https://www.dbs.com.sg/personal/support/wealth-oet-search-for-stock.html",
         pictureLinks: [
@@ -93,20 +93,26 @@ export const projects = [
         website: "https://mos-sea.vercel.app/",
         pictureLinks: [
             { 
-                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_intro.png",
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_intro.PNG",
                 alt: "mos_image1",
                 text: "",
                 subtext: "" 
             }, 
             { 
-                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_ourwork.png", 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_ourwork.PNG", 
                 alt: "mos_image2",
                 text: "",
                 subtext: "" 
             }, 
             { 
-                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_world.png",
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_world.PNG",
                 alt: "mos_image3",
+                text: "",
+                subtext: "" 
+            }, 
+            { 
+                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/mosworld_contactpage.PNG",
+                alt: "mos_image4",
                 text: "",
                 subtext: "" 
             }, 
@@ -122,9 +128,9 @@ export const projects = [
         the process, which allowed the client to use the same script for the future
         </p> 
         `,
-        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/payroll_auto.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/payroll_auto_modified.png",
         picture_alt: "payroll automation",
-        gitLink: "https://github.com/junwei2110/payroll-automation-mazars"
+        gitLink: "https://github.com/junwei2110/payroll-automation"
     },
     {
         title: "Love Nest Mobile App",
@@ -142,7 +148,7 @@ export const projects = [
         search bar optimization, push notifications using Google Firebase, deep-linking for user
         redirection, and chat application using Web Sockets.</li>
         </ul>`,
-        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_Scheduler.png",
+        picture: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_logo-modified.png",
         picture_alt: "LoveNest App",
         gitLink: "https://github.com/junwei2110/LoveNest",
         pictureLinks: [
@@ -151,13 +157,7 @@ export const projects = [
                 alt: "lovenest_1",
                 text: "",
                 subtext: "" 
-            }, 
-            { 
-                src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_Gallery.png", 
-                alt: "lovenest_2",
-                text: "",
-                subtext: "" 
-            }, 
+            },  
             { 
                 src: "https://junwei-portfolio.s3.ap-southeast-1.amazonaws.com/LoveNest_DatePlanner.png", 
                 alt: "lovenest_3",

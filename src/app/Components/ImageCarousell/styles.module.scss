@@ -45,18 +45,17 @@ $img-animation-duration-ms: $img-animation-fade-in-duration * 1000 + 'ms';
 
 .ButtonGroup {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: absolute;
-    bottom: calc(-10vh + 75px);
     justify-content: center;
-    width: 100%;
-    gap: 10px;
     z-index: 4;
+    top: 25vh;
+    right: -10vw;
 }
 
-.RadioBtn {
-    accent-color: rgba(11, 192, 220, 0.9)
-}
+// .RadioBtn {
+//     accent-color: rgba(11, 192, 220, 0.9)
+// }
 
 .TextContainer {
     position: absolute;

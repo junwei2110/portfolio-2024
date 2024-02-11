@@ -14,7 +14,7 @@ export type Images = {
     caption?: string;
 }[]
 
-export const ImageCarousell = ({ images } : {images: Images}) => {
+export const ImageCarousell = ({ images, useTimer } : {images: Images; useTimer: boolean}) => {
 
     const [imgUrl, setImgUrl] = useState(0);
     const prevImgRef = useRef(0);
@@ -25,16 +25,20 @@ export const ImageCarousell = ({ images } : {images: Images}) => {
     }
 
     useEffect(() => {
-        const intervalTiming = parseInt(styles.animationDuration) * 1000;
-        const galleryInterval = setTimeout(() => {
-            prevImgRef.current = imgUrl;
-            setImgUrl((imgUrl + 1) % images.length)
-        }, intervalTiming);
+        if (useTimer) {
+            const intervalTiming = parseInt(styles.animationDuration) * 1000;
+            const galleryInterval = setTimeout(() => {
+                prevImgRef.current = imgUrl;
+                setImgUrl((imgUrl + 1) % images.length)
+            }, intervalTiming);
+    
+            return () => {
+                clearTimeout(galleryInterval);
+            }
 
-        return () => {
-            clearTimeout(galleryInterval);
         }
-    }, [imgUrl, images.length]);
+
+    }, [imgUrl, images.length, useTimer]);
 
     return (
       <>
@@ -44,7 +48,6 @@ export const ImageCarousell = ({ images } : {images: Images}) => {
             src={image.src}
             alt={`img-${idx}`}
             fill={true}
-            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={imgUrl === idx ? styles.ImageContainer : (prevImgRef.current === idx ? "" : styles.ImageContainerEmpty)}
             style={{ objectFit: "contain" }}
             />

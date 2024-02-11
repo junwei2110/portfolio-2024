@@ -17,15 +17,17 @@ export type InfoCardProps = {
     gitLink?: string;
     website?: string;
     pictureLinks?: Images;
+
     
 }
 
 type InfoCardSpecificProps = {
     setPicLinks: (images: Images) => void;
+    isMobile: boolean
 }
 
 
-export const InfoCard = ({ title, timeline, description, picture, picture_alt, gitLink, website, pictureLinks, setPicLinks }: InfoCardProps & InfoCardSpecificProps) => {
+export const InfoCard = ({ title, timeline, description, picture, picture_alt, gitLink, website, pictureLinks, setPicLinks, isMobile }: InfoCardProps & InfoCardSpecificProps) => {
 
     const imageContainerRef = useRef<HTMLDivElement | null>(null);
     const imageTextBoxRef = useRef<HTMLDivElement | null>(null);
@@ -43,7 +45,7 @@ export const InfoCard = ({ title, timeline, description, picture, picture_alt, g
     }
 
     const callbackFn = (func: () => void) => {
-        if (pictureLinks?.length) {
+        if (!isMobile && pictureLinks?.length) {
             return func;
         }
 
@@ -75,8 +77,8 @@ export const InfoCard = ({ title, timeline, description, picture, picture_alt, g
                 <h3><strong>{title}</strong></h3>
                 <div><strong>{timeline}</strong></div>
                 <div>{parse(description)}</div>
-                {gitLink ? <IconWithDesc iconName={"gitLink"} link={gitLink} text={`Github @ ${title}`} /> : null}
-                {website ? <IconWithDesc iconName={"website"} link={website} text={`Website @ ${title}`} /> : null}
+                {gitLink ? <IconWithDesc iconName={"gitLink"} link={gitLink} text={`Github`} /> : null}
+                {website ? <IconWithDesc iconName={"website"} link={website} text={`Website`} /> : null}
             </div>
         </div>     
     )
